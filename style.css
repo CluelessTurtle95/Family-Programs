@@ -1,0 +1,33 @@
+#formEntry{
+  background-image:url("wallpaper-beach.jpg");
+  width: 100vw;
+  padding-top: 10px;
+}
+
+#formEntryChild{
+  position:relative;
+  width: 60vw;
+  margin-left:auto;
+  margin-right:auto;
+}
+
+.form-control{
+}
+
+.card{
+    width:100vw;
+    padding: 30px 30px 30px 30px;
+    border-radius: 10px 10px 10px;
+
+} .card:hover{
+}
+
+.card-text{
+  display: inline-block;
+  width: 100%;
+} .card-text:hover{
+  -webkit-box-shadow: inset 0 0 3px rgba(0, 10, 10, 1);
+  -we
+  border-radius: 10px;
+  transition: 0.2s;
+}
