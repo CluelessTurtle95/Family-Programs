@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" ng-app="app">
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0 user=scalable=0" name="viewport">
+  <title>Child and Family Programs</title>
+
+  <!-- Boostrap Libraries -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.1/angular.min.js"></script>
+  <script type="text/javascript" src="app.js"></script>
+  <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body ng-controller="MainController">
+  <button ng-click="getRequest">{{data.explanation}}</button>
+
+
+  <nav class="nav navbar-inverse navbar-static-top">
+    <div class="container-fluid">
+      <i class="glyphicon glyphicon-menu-hamburger"></i>
+      <a class="navbar-brand" href="index.html">Best Website Ever</a>
+    </div>
+  </nav>
+
+
+  <div id="formEntry">
+    <div id="formEntryChild" class="container-fluid">
+        <form>
+          <div class="form-group">
+            <label for="exampleInputEmail1">Describe the program you envision:</label>
+            <input type="text" class="form-control" placeholder="Enter description">
+            <small class="form-text text-muted">What are you looking for?</small>
+          </div>
+          <div class="form-group">
+            <p>Enter Your Address Below:</p>
+            <label for="exampleInputEmail1">Street Number:</label>
+            <input type="text" class="form-control" placeholder="#" ng-model="streetnumber">
+
+            <label for="exampleInputEmail1">Street Name:</label>
+            <input type="text" class="form-control" placeholder="Something Road" ng-model="streetname">
+
+            <label for="exampleInputEmail1">City:</label>
+            <input type="text" class="form-control" placeholder="Some City" ng-model="city">
+
+            <label for="exampleInputEmail1">Province:</label>
+            <input type="text" class="form-control" placeholder="Some Province" ng-model="province">
+
+            <small class="form-text text-muted">What are you looking for?</small>
+          </div>
+          <button type="submit" class="btn btn-primary" ng-click="reload">Submit</button>
+        </form>
+      </div>
+    </div>
+
+    <!-- <div class="card" style="width: 18rem;">
+      <div class="card-body">
+        <h5 class="card-title">Card title</h5>
+        <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
+        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+        <a href="#" class="card-link">Card link</a>
+        <a href="#" class="card-link">Another link</a>
+      </div>
+    </div> -->
+    <div class="card" ng-repeat="dat in data">
+        <div class = "card-body">
+          <p class="card-text">Program: {{dat.program}}</p>
+          <p class="card-text">Agency: {{dat.agency}}</p>
+          <p class="card-text">Address: {{dat.address}} </p>
+          <p class="card-text">Phone number: {{dat.phone}} </p>
+        </div>
+    </div>
+
+  </div> <!-- Contained -->
+</body>
+</html>
