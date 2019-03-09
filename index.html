@@ -12,20 +12,26 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.1/angular.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.1/angular-route.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+
   <script type="text/javascript" src="app.js"></script>
   <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 
 <body ng-controller="MainController">
-  <button ng-click="getRequest">{{data.explanation}}</button>
-
-
-  <nav class="nav navbar-inverse navbar-static-top">
+  <nav id="navBar" class="nav navbar-inverse navbar-static-top">
     <div class="container-fluid">
-      <i class="glyphicon glyphicon-menu-hamburger"></i>
       <a class="navbar-brand" href="index.html">Best Website Ever</a>
     </div>
+
+    <ul class="nav navbar-right">
+
+    </ul>
   </nav>
+
+
 
 
   <div id="formEntry">
@@ -33,26 +39,26 @@
         <form>
           <div class="form-group">
             <label for="exampleInputEmail1">Describe the program you envision:</label>
-            <input type="text" class="form-control" placeholder="Enter description">
+            <input type="text" class="form-control" placeholder="Enter description" id="message">
             <small class="form-text text-muted">What are you looking for?</small>
           </div>
           <div class="form-group">
             <p>Enter Your Address Below:</p>
             <label for="exampleInputEmail1">Street Number:</label>
-            <input type="text" class="form-control" placeholder="#" ng-model="streetnumber">
+            <input type="text" class="form-control" placeholder="#" ng-model="streetnumber" id="streetNumber">
 
             <label for="exampleInputEmail1">Street Name:</label>
-            <input type="text" class="form-control" placeholder="Something Road" ng-model="streetname">
+            <input type="text" class="form-control" placeholder="Something Road" ng-model="streetname" id="streetName">
 
             <label for="exampleInputEmail1">City:</label>
-            <input type="text" class="form-control" placeholder="Some City" ng-model="city">
+            <input type="text" class="form-control" placeholder="Some City" ng-model="city" id="City">
 
             <label for="exampleInputEmail1">Province:</label>
-            <input type="text" class="form-control" placeholder="Some Province" ng-model="province">
+            <input type="text" class="form-control" placeholder="Some Province" ng-model="province" id="Province">
 
             <small class="form-text text-muted">What are you looking for?</small>
           </div>
-          <button type="submit" class="btn btn-primary" ng-click="reload">Submit</button>
+          <button id="a" type="submit" class="btn btn-primary" onclick="download('file text', 'user-input.txt', 'text/plain')" ng-click="tempaddress = address">Submit</button>
         </form>
       </div>
     </div>
