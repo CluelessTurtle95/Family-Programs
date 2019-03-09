@@ -33,6 +33,6 @@ def getLatLong(string):
     location = geolocator.geocode(string)
     return location.latitude , location.longitude
 
-def getOldReviews()
+def getOldReviews():
     result = json.load(open('oldReviews.json'))
     return result
